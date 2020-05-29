@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: the-route
 spec:
-  host: changeme
+  host: placeholder
   port:
     targetPort: 8080
   to:
