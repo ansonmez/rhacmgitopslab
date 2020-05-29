@@ -1,0 +1,9 @@
+# Define the `NAMESPACE` variable
+NAMESPACE=mongo
+# Define the `SERVICE_NAME` variable
+SERVICE_NAME=mongo
+# Define the variable of `ROUTE_CLUSTER1`
+ROUTE_CLUSTER1=mongo-istanbul.apps.heisenbug.lplab.online
+# Define the variable of `ROUTE_CLUSTER2`
+ROUTE_CLUSTER2=mongo-ankara.apps.jelly.lplab.online
+SANS="localhost,localhost.localdomain,127.0.0.1,${ROUTE_CLUSTER1},${ROUTE_CLUSTER2},${SERVICE_NAME},${SERVICE_NAME}.${NAMESPACE},${SERVICE_NAME}.${NAMESPACE}.svc.cluster.local"
