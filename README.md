@@ -2,7 +2,7 @@
 
 During the labs you will be deploying workloads on three OpenShift 4 clusters. 
 
-One cluster will be Hub and other two cluster will be Spoke clusters.
+One cluster will be Hub and other three cluster will be Spoke clusters.
 
 We assume clusters are ready Red Hat ACM installed and you have access to clusters
 
