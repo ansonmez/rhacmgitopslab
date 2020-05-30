@@ -1,0 +1,9 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: istanbulopenshiftmongo
+  namespace: mongo
+spec:
+  clusterSelector:
+    matchLabels:
+      city: istanbul
