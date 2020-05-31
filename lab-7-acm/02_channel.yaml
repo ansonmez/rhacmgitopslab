@@ -1,8 +1,8 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-  name: mongochannel
-  namespace: mongo
+  name: pacmanchannel
+  namespace: pacman
 spec:
   pathname: 'https://github.com/ansonmez/rhacmgitopslab.git'
   type: GitHub

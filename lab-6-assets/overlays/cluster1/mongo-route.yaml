@@ -4,4 +4,4 @@ metadata:
   name: mongo
   namespace: mongo
 spec:
-  host: mongo-ankara.apps.jelly.lplab.online
+  host: mongocluster1route

@@ -2,4 +2,3 @@ bases:
 - ../../base
 patchesStrategicMerge:
 - pacman-deployment.yaml 
-#- pacman-route.yaml

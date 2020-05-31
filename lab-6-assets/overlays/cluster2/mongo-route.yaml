@@ -4,4 +4,4 @@ metadata:
   name: mongo
   namespace: mongo
 spec:
-  host: mongo-istanbul.apps.heisenbug.lplab.online
+  host: mongocluster2route

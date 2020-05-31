@@ -1,16 +1,16 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: mongo-istanbul                           
+  name: mongo-cluster3
   namespace: mongo
   labels:
     name: mongo
   annotations:
     apps.open-cluster-management.io/github-branch: master
-    apps.open-cluster-management.io/github-path: lab-6-assets/overlays/istanbul
+    apps.open-cluster-management.io/github-path: lab-6-assets/overlays/cluster3
 spec:
-  channel:  web-app/federationanil
+  channel:  mongo/mongochannel
   placement: 
     placementRef: 
       kind: PlacementRule
-      name: istanbulopenshiftmongo
+      name: cluster3

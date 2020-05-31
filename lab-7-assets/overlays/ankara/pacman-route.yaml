@@ -1,7 +1,0 @@
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: pacman
-  namespace: pacman
-spec:
-  host: pacman-pacman.apps.jelly.lplab.online
