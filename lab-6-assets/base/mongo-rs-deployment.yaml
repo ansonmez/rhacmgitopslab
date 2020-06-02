@@ -49,9 +49,9 @@ spec:
         - name: MONGODB_REPLICA_NAME
           value: "rs0"
         - name: PRIMARY_NODE
-          value: "mongo-istanbul.apps.heisenbug.lplab.online:443"
+          value: "mongo-cluster1.apps.heisenbug.lplab.online:443"
         - name: REPLICA_MEMBERS
-          value: "mongo-istanbul.apps.heisenbug.lplab.online:443,mongo-ankara.apps.jelly.lplab.online:443"
+          value: "mongo-cluster1.apps.heisenbug.lplab.online:443,mongo-cluster2.apps.jelly.lplab.online:443,mongo-cluster3.apps.as4test.lp.int:443"
         volumeMounts:
         - mountPath: /data/db
           name: mongodb-data
