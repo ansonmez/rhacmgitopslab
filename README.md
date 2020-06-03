@@ -12,4 +12,5 @@ We assume clusters are ready Red Hat ACM installed and you have access to cluste
 * [Lab  - Deploying MongoDB](./6.md)<br>
 * [Lab  - Deploying Pacman](./7.md)<br>
 * [Lab  - Application Portability](./8.md)<br>
+* [Lab  - Canary Deployments](./.md)<br>
 
