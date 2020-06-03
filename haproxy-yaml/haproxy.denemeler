@@ -1,0 +1,92 @@
+#---------------------------------------------------------------------
+# Example configuration for a possible web application.  See the
+# full configuration options online.
+#
+#   http://haproxy.1wt.eu/download/1.4/doc/configuration.txt
+#
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+# Global settings
+#---------------------------------------------------------------------
+global
+    # to have these messages end up in /var/log/haproxy.log you will
+    # need to:
+    #
+    # 1) configure syslog to accept network log events.  This is done
+    #    by adding the '-r' option to the SYSLOGD_OPTIONS in
+    #    /etc/sysconfig/syslog
+    #
+    # 2) configure local2 events to go to the /var/log/haproxy.log
+    #   file. A line like the following can be added to
+    #   /etc/sysconfig/syslog
+    #
+    #    local2.*                       /var/log/haproxy.log
+    #
+    log         127.0.0.1 local2
+
+    # unecessary since already in a container and runs w/ a non-root user
+    # chroot      /var/lib/haproxy
+    # user        haproxy
+    # group       haproxy
+    # daemon
+
+    pidfile     /var/lib/haproxy/haproxy.pid
+    maxconn     4000
+#    tune.maxrewrite         1638400
+#    tune.bufsize           1638400
+#    tune.http.maxhdr 10000
+#    tune.ssl.default-dh-param 2048
+
+#---------------------------------------------------------------------
+# common defaults that all the 'listen' and 'backend' sections will
+# use if not designated in their block
+#---------------------------------------------------------------------
+defaults
+    mode                    http
+    log                     global
+        stats enable
+        stats hide-version
+        stats refresh 30s
+        stats show-node
+        stats auth admin:password
+        stats uri  /haproxy?stats
+#    option                  httplog
+    option 		    tcplog
+    option                  dontlognull
+#    option http-server-close
+    option forwardfor       except 127.0.0.0/8
+    option                  redispatch
+    retries                 2
+    timeout http-request    5s
+    timeout queue           1m
+    timeout connect         5000
+    timeout client          30000
+    timeout server          30000
+    timeout http-keep-alive 10s
+    timeout check           5000
+    maxconn                 3000
+    default-server          init-addr last,libc,none
+
+#---------------------------------------------------------------------
+# main frontend which proxys to the backends
+#---------------------------------------------------------------------
+frontend  main
+    bind *:8443  
+#    bind *:8443  ssl crt /opt/haproxy-ssl/haproxy.pem
+    mode http
+#    http-request set-header X-Forwarded-For %[src]
+#    reqadd X-Forwarded-Proto:\ https
+#    option http-server-close
+    default_backend             app
+
+#---------------------------------------------------------------------
+# round robin balancing between the various backends
+#---------------------------------------------------------------------
+backend app
+    mode http 
+#    option httpchk GET / HTTP/1.1\r\nHost:\ pacman-multi.apps.as4xy.lp.int
+    http-request set-header Host pacman-multi.apps.as4xy.lp.int
+    balance roundrobin
+        server istanbul  pacman.apps.heisenbug.lplab.online:80   
+        server ankara    pacman.apps.jelly.lplab.online:80    

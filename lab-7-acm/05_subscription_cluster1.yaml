@@ -7,7 +7,7 @@ metadata:
     name: pacman
   annotations:
     apps.open-cluster-management.io/github-branch: master
-    apps.open-cluster-management.io/github-path: lab-7-assets/overlays/istanbul
+    apps.open-cluster-management.io/github-path: lab-7-assets/overlays/cluster1
 spec:
   channel:  pacman/pacmanchannel
   placement: 
