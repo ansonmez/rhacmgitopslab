@@ -6,6 +6,7 @@ One cluster will be Hub and other three cluster will be Spoke clusters.
 
 We assume clusters are ready Red Hat ACM installed and you have access to clusters
 
+* [Lab  - Prerequisites](./1.md)<br>
 * [Lab  - Login into OpenShift Clusters and Configure Context](./2.md)<br>
 * [Lab  - Deploying and Managing a Project with GitOps](./4.md)<br>
 * [Lab  - Customizing Deployments](./5.md)<br>
