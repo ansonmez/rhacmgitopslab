@@ -8,6 +8,7 @@ We assume clusters are ready Red Hat ACM installed and you have access to cluste
 
 * [Lab  - Prerequisites](./1.md)<br>
 * [Lab  - Login into OpenShift Clusters and Configure Context](./2.md)<br>
+* [Lab  - Git Ops Introduction](./3.md)<br>
 * [Lab  - Deploying and Managing a Project with GitOps](./4.md)<br>
 * [Lab  - Customizing Deployments](./5.md)<br>
 * [Lab  - Deploying MongoDB](./6.md)<br>
