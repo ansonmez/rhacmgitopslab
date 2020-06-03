@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: the-route
 spec:
-  host: kustomized-app.apps.heisenbug.lplab.online
+  host: changeme
   port:
     targetPort: 8080
   to:
