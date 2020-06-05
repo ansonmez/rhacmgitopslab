@@ -16,3 +16,8 @@ We assume clusters are ready Red Hat ACM installed and you have access to cluste
 * [Lab  - Application Portability](./8.md)<br>
 * [Lab  - Canary Deployments](./.md)<br>
 
+-----
+Disclaimer 
+This lab is RH ACM translated version of https://github.com/openshift/federation-dev . 
+Thanks to contributer of referenced lab. 
+-----
