@@ -3,4 +3,4 @@ kind: Route
 metadata:
   name: the-route
 spec:
-  host: web-app.apps.jelly.lplab.online
+  host: web-app.apps.lab-bbfb.sandbox283.opentlc.com

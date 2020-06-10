@@ -4,6 +4,6 @@ metadata:
   name: cluster1
   namespace: web-app
 spec:
-  clusterSelector::
+  clusterSelector:
     matchLabels:
-      clustername: cluster1
+      clusterid: cluster1

@@ -3,4 +3,4 @@ kind: Route
 metadata:
   name: the-route
 spec:
-  host: web-app.apps.heisenbug.lplab.online
+  host: web-app.apps.lab-3669.sandbox1237.opentlc.com
