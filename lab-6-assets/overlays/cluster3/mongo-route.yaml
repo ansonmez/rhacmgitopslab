@@ -4,4 +4,4 @@ metadata:
   name: mongo
   namespace: mongo
 spec:
-  host: mongo-cluster3.apps.as4test.lp.int
+  host: mongo-cluster3.apps.lab-d4ad.sandbox324.opentlc.com
