@@ -3,4 +3,3 @@
 # Except these files
 !.gitignore
 !kustomization.yaml
-!mongo-route.yaml
