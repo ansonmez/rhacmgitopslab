@@ -17,7 +17,7 @@ spec:
     spec:
       serviceAccount: pacman
       containers:
-      - image: quay.io/ifont/pacman-nodejs-app
+      - image: quay.io/mavazque/pacman:latest
         name: pacman
         ports:
         - containerPort: 8080
