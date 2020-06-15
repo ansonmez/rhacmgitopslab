@@ -3,9 +3,9 @@ kind: PlacementRule
 metadata:
   labels:
     app: httpd
-  name: allopenshift
+  name: cluster1only
   namespace: simple-app
 spec:
-  clusterLabels:
+  clusterSelector:
     matchLabels:
-      vendor: OpenShift
+      clusterid: cluster1

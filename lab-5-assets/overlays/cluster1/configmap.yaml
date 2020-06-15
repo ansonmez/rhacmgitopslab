@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: the-map
 data:
-  altGreeting: "The app is running on Cluster1 cluster"
+  altGreeting: "The app is running on cluster1"
