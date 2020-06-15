@@ -4,4 +4,4 @@ metadata:
   name: mongo
   namespace: mongo
 spec:
-  host: mongo-cluster2.apps.lab-bbfb.sandbox283.opentlc.com
+  host: mongocluster2route
