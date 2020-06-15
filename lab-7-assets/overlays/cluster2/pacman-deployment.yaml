@@ -6,4 +6,4 @@ metadata:
   name: pacman
   namespace: pacman
 spec:
-  replicas: 1
+  replicas: 0
